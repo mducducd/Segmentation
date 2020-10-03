@@ -49,8 +49,8 @@ scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda_epoch,
 
 #train_model
 def train_model(model, dataloader_dict, criterion, scheduler, optimizer, num_epochs):
-    #device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
-    device = torch.device('cpu')
+    device = torch.device('cuda:0' if torch.cuda.is_available() else 'cpu')
+    #device = torch.device('cpu')
     print("device", device)
     
     model.to(device)
